@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Nacionalidade</title>
+</head>
+<body>
+    <h1>Sistema de Visto</h1>
+    Nacionalidade: <input type ="String" name = "txtpaís" id="txtpaís">
+    <input type = "button" value = "verificar" onclick = "comparar()">
+    <div id="res">
+    <script>
+        function comparar(){
+            var txtp = window.document.querySelector('input#txtpaís')
+            var res = window.document.querySelector('div#res')
+            var país = String(txtp.value)
+            res.innerHTML = `<p>Você mora no <strong> ${país} </strong> <p>`
+                if(país == 'Brasil' || país == 'brasil'){
+                    res.innerHTML = `Sua nacionalidade é <strong> Brasileiro(a) </strong> `
+                }else{
+                    res.innerHTML = `Você é estrangeiro(a)`
+                }
+            
+        }
+    </script>
+    
+</body>
+</html>
